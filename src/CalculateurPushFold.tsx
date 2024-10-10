@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 
 // Les types des données de range
@@ -19,9 +20,38 @@ const RANGES_DE_MAIN: RangesDeMain = {
       avecAntes: "TT+, ATs+, KQs, AJo+", 
       sansAntes: "JJ+, AQs+, AKo" 
     },
-    // ... autres configurations
   },
-  // ... autres tailles de stack
+  '12.5bb': {
+    2: {
+      avecAntes: "22+, A2+, K6s+, KTo+, Q8s+, QTo+, J8s+, JTo, T8s+, 97s+, 87s, 76s",
+      sansAntes: "22+, A2+, K6s+, KTo+, Q8s+, QTo+, J8s+, JTo, T8s+, 97s+, 87s, 76s"
+    },
+    3: {
+      avecAntes: "22+, A2s+, A9o+, K8s+, KTo+, Q8s+, QJo, J8s+, JTo, T8s+, 98s",
+      sansAntes: "22+, A2s+, A9o+, K8s+, KTo+, Q8s+, QJo, J8s+, JTo, T8s+, 98s"
+    },
+    4: {
+      avecAntes: "22+, A8s+, A5s-A4s, ATo+, K9s+, KJo+, Q9s+, J9s+, T9s",
+      sansAntes: "22+, A8s+, A5s-A4s, ATo+, K9s+, KJo+, Q9s+, J9s+, T9s"
+    },
+    5: {
+      avecAntes: "33+, A9s+, A5s-A4s, AJo+, K9s+, KJo+, QTs+, JTs",
+      sansAntes: "33+, A9s+, A5s-A4s, AJo+, K9s+, KJo+, QTs+, JTs"
+    },
+    6: {
+      avecAntes: "88+, A9s+, A5s, AJo+, KTs+, KQo, QTs+, JTs",
+      sansAntes: "88+, A9s+, A5s, AJo+, KTs+, KQo, QTs+, JTs"
+    },
+    7: {
+      avecAntes: "99+, ATs+, A5s, AQo+, KTs+, QTs+",
+      sansAntes: "99+, ATs+, A5s, AQo+, KTs+, QTs+"
+    },
+    8: {
+      avecAntes: "TT+, ATs+, AJo+, KJs+, QJs",
+      sansAntes: "TT+, ATs+, AJo+, KJs+, QJs"
+    }
+  },
+  // Ajoute d'autres tailles de BB ici (10bb, 7.5bb, etc.)
 };
 
 const CalculateurPushFold: React.FC = () => {
@@ -64,7 +94,6 @@ const CalculateurPushFold: React.FC = () => {
           </h1>
 
           <div className="space-y-6">
-            {/* Section Taille de Stack */}
             <div className="bg-gray-800 rounded-xl p-4 md:p-5">
               <h2 className="text-lg md:text-xl font-semibold mb-3 text-green-400">
                 Taille de Stack (BB)
@@ -84,7 +113,6 @@ const CalculateurPushFold: React.FC = () => {
               </div>
             </div>
 
-            {/* Section Antes */}
             <div className="bg-gray-800 rounded-xl p-4 md:p-5">
               <h2 className="text-lg md:text-xl font-semibold mb-3 text-green-400">
                 Antes
@@ -109,7 +137,6 @@ const CalculateurPushFold: React.FC = () => {
               </div>
             </div>
 
-            {/* Section Joueurs Restants */}
             <div className="bg-gray-800 rounded-xl p-4 md:p-5">
               <h2 className="text-lg md:text-xl font-semibold mb-3 text-green-400">
                 Joueurs restants à agir
@@ -129,7 +156,6 @@ const CalculateurPushFold: React.FC = () => {
               </div>
             </div>
 
-            {/* Section Résultat */}
             {range && (
               <div className="bg-gray-800 rounded-xl p-4 md:p-5">
                 <h2 className="text-lg md:text-xl font-semibold mb-3 text-green-400">
