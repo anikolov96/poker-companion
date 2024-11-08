@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  main {
+    flex: 1;
+    overflow: auto;
+  }
+  
+  .nav-bar {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+    background-color: #111827; /* Utilise la couleur de fond de la page principale */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: inherit; /* Cela correspond à la police utilisée dans le reste de l'application */
+  }
+  
+  .nav-item {
+    color: #aaa;
+    text-decoration: none;
+    @apply text-lg font-semibold; /* Taille texte */
+    transition: color 0.2s, border-bottom 0.3s; /* Ajoute une transition douce pour l'effet visuel */
+  }
+  
+  .nav-item:hover {
+    color: #ffffff; /* Effet survol pour améliorer l'interactivité */
+  }
+  
+  .nav-item.active {
+    color: #22c55e; /* Même couleur verte que le texte des sections actives */
+    border-bottom: 1px solid #22c55e; /* Ajoute une bordure inférieure pour la section active */
+    padding-bottom: 0.3rem; /* Ajuste le padding pour une meilleure apparence */
+  }
+  
